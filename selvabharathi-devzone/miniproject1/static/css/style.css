@@ -1,0 +1,107 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aliceblue;
+    background-image: url(../img/2.avif);
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    color: greenyellow;
+}
+.left img{
+    width: 100px;
+
+}
+.left div{
+    line-height: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.mid{
+    display: block;
+    width: 45%;
+    margin: 30px auto;
+}
+.navbar {
+    display: inline-block;
+    
+}
+.navbar li{
+    display: inline-block;
+    font-size: 25px;
+}
+.navbar li a{
+    color: white;
+        text-decoration: none;
+        padding: 14px 12px;
+}
+.navbar li a:hover, .navbar li a.active{
+    text-decoration: underline;
+    color: red;
+}
+.right{
+    position: absolute;
+    right: 34px;
+    top: 40px;
+    display: inline-block;
+}
+.btn{
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.container{
+    border: 2px solid white;
+    margin: 75px 377px;
+    padding: 70px;
+    width:max-content;
+border-radius: 5px;   
+opacity: 0.9;
+}
+.form-group input{
+    text-align: center;
+    justify-content: center;
+    display: block;
+    width: 294px;
+padding: 5px;
+border: 2px solid black;
+margin: 10px auto;
+font-size: 25px;
+border-radius: 5px;
+}
+input:hover{
+    color: white;
+    background-color:rgb(212, 175, 175);
+}
+.container h1{
+    text-align: center;
+    font-size: 30px;
+    color: chartreuse;
+}
+.container button{
+    display: block;
+    margin: 10px auto;
+    width: 300px;
+    padding: 5px ;
+    border: 2px solid black;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+
+
