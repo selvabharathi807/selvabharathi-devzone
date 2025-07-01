@@ -1,0 +1,221 @@
+/* ========== THEME COLORS ========== */
+:root {
+  --mainTextColor: #000;
+  --secondaryTextColor: #333;
+  --mainLinkColor: #0da2b8;
+  --mainBorderColor: #ddd;
+  --mainBgColor: #f9f9f9;
+  --cardBgColor: #ffffff;
+}
+
+[data-theme="dark"] {
+  --mainTextColor: #fff;
+  --secondaryTextColor: #adb0b1;
+  --mainLinkColor: #1ebed6;
+  --mainBorderColor: #2b3031;
+  --mainBgColor: #131415;
+  --cardBgColor: #1e1e1e;
+}
+
+/* ========== BASE STYLES ========== */
+* {
+  font-family: "Readex Pro", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: var(--mainTextColor);
+}
+
+body {
+  background-color: var(--mainBgColor);
+  padding: 20px;
+}
+
+/* ========== THEME SWITCHER ========== */
+#theme-switcher {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.theme {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--mainBorderColor);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme:hover {
+  height: 33px;
+  width: 33px;
+}
+
+#theme-light {
+  background-color: #fff;
+}
+
+#theme-dark {
+  background-color: #000;
+}
+
+/* ========== HERO SECTION ========== */
+#wrapper--hero {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--mainBorderColor);
+}
+
+.user-name {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#bio a {
+  color: var(--mainLinkColor);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#email {
+  color: var(--mainTextColor);
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ========== SOCIAL LINKS ========== */
+#social--list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+#social--list a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--mainTextColor);
+  transition: color 0.3s ease;
+}
+
+#social--list a:hover {
+  color: var(--mainLinkColor);
+}
+
+/* ========== SECTION WRAPPER ========== */
+.section--page {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 10px;
+}
+
+/* ========== QUALIFICATIONS LIST ========== */
+#qualifications--list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#qualifications--list li {
+  margin: 8px 0;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 24px;
+}
+
+#qualifications--list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+/* ========== TECH STACK CARDS ========== */
+#wrapper--techstack__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.card--techstack {
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 8px;
+  padding: 12px;
+  background-color: var(--cardBgColor);
+  font-weight: 500;
+}
+
+/* ========== WORK HISTORY ========== */
+#work-history-wrapper {
+  margin-top: 20px;
+}
+
+.card--work-history {
+  background-color: var(--cardBgColor);
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.card--work-history ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card--work-history li {
+  margin-bottom: 6px;
+}
+
+/* ========== PROJECT LINKS ========== */
+#card--project {
+  margin-bottom: 10px;
+}
+
+#card--project a {
+  color: var(--mainLinkColor);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#card--project a:hover {
+  color: #0056b3;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  #wrapper--hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #social--list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #profile-pic {
+    margin-bottom: 10px;
+  }
+}
