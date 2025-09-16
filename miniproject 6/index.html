@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Side: Registration Form -->
+    <div class="form-box">
+      <h2>Register Your Details</h2>
+      <form id="regForm">
+        <input type="text" id="name" placeholder="Enter Your Name" required>
+        <input type="email" id="email" placeholder="Enter Your Email" required>
+        <input type="number" id="aadhaar" placeholder="Enter Your Aadhaar Card Number" required>
+        
+        <label>
+          <input type="radio" name="gender" value="Male" required> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Female" required> Female
+        </label>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Right Side: Table -->
+    <div class="table-box">
+      <h2>View Details</h2>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search">
+        <button id="searchBtn">Search</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Aadhaar</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
